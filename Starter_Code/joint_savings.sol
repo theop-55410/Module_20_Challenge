@@ -27,6 +27,11 @@ contract JointSavings {
     - Two variables of type `uint public` named `lastWithdrawAmount` and `contractBalance`.
     */
     // YOUR CODE HERE!
+    address payable accountOne;
+    address payable accountTwo;
+    address public lastToWithdraw;
+    uint public lastWithdrawAmount;
+    uint public contractBalance;
 
     /*
     Define a function named **withdraw** that will accept two arguments.
@@ -87,5 +92,6 @@ contract JointSavings {
     Finally, add the **default fallback function** so that your contract can store Ether sent from outside the deposit function.
     */
     // YOUR CODE HERE!
+    function () external payable {}
     
 }
